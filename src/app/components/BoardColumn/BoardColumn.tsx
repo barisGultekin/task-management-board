@@ -6,9 +6,10 @@ interface BoardColumnProps {
   title: string;
   tasks: { id: number; title: string; status: string; assigneeId: number }[];
   onDrop: (taskId: number, newStatus: string) => void;
+  onTaskClick: (taskId: number) => void;
 }
 
-const BoardColumn: React.FC<BoardColumnProps> = ({ title, tasks, onDrop }) => {
+const BoardColumn: React.FC<BoardColumnProps> = ({ title, tasks, onDrop, onTaskClick }) => {
   const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
   };
@@ -31,6 +32,7 @@ const BoardColumn: React.FC<BoardColumnProps> = ({ title, tasks, onDrop }) => {
           id={task.id}
           title={task.title}
           assigneeId={task.assigneeId} // Pass assigneeId to TaskCard
+          onClick={() => onTaskClick(task.id)}
         />
       ))}
     </div>
