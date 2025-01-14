@@ -19,9 +19,13 @@ const Board = () => {
     dispatch(updateTaskStatus({ id: taskId, status: newStatus }));
   };
 
+  const closeModal = () => {
+    console.log("foo")
+  };
+
   return (
     <div className={styles.board}>
-      
+      <Modal onClose={closeModal}/>
       {["Open", "In Progress", "In Review", "Done"].map((status) => (
         <BoardColumn
           key={status}
