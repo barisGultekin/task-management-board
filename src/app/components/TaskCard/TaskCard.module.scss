@@ -1,13 +1,47 @@
 .card {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 8px;
-    text-align: center;
-    cursor: grab;
-    transition: box-shadow 0.2s;
-  
-    &:hover {
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+
+  border: 1px solid #e9e9e9;
+  border-radius: 6px;
+
+  padding: 24px;
+  text-align: left;
+  cursor: grab;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+  }
+
+  .taskInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+
+    p {
+      color: #343434;
+      font-weight: 600;
+      font-size: 1.2em;
+    }
+
+    .assignee {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+
+      p {
+        font-size: 1em;
+        font-weight: 500;
+      }
+
+      img {
+        background-color: #cfcfcf;
+        border-radius: 100px;
+      }
     }
   }
+}
