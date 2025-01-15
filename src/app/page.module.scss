@@ -6,15 +6,38 @@
   flex-direction: column;
   padding: 16px;
 
+  overflow-y: hidden;
+
   .toolbar {
     width: 100%;
     height: 56px;
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    padding-bottom: 16px;
+    padding-top: 32px;
+    padding-bottom: 48px;
     border-bottom: 1px solid #363636;
+
+    button {
+      all: unset;
+      background-color: #007bff20;
+      color: #007bff;
+
+      padding: 1.2em 3.2em;
+      border-radius: 12px;
+
+      font-weight: 600;
+
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #007bff;
+        color: var(--foreground);
+        cursor: pointer;
+      }
+    }
   }
 
   .content {
