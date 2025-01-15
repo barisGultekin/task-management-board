@@ -12,8 +12,8 @@
   }
   
   .modal {
-    background-color: #fff;
-    padding: 20px;
+    background-color: #202020;
+    padding: 24px;
     border-radius: 8px;
     width: 500px;
     max-width: 90%;
@@ -22,19 +22,31 @@
   }
   
   .closeButton {
+    all: unset;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 20px;
+    right: 20px;
+
+    background-color: #2b2b2b;
+    color: var(--foreground);
+  
+    height: 32px;
+    width: 32px;
+
+    border-radius: 100px;
+
     font-size: 1.5rem;
     cursor: pointer;
-  }
-  
-  .modal h2 {
-    margin-bottom: 10px;
-  }
-  
-  .modal p {
-    margin-bottom: 10px;
+
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #3d3d3d;
+      color: #fff;
+    }
   }
