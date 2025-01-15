@@ -2,4 +2,59 @@
     display: flex;
     gap: 20px;
     padding: 20px;
+    height: calc(100vh - 76px);
+
+    .confirmation {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        margin-bottom: 24px;
+      }
+
+      h2, p{
+        padding-right: 24px;
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+    
+        button {
+          padding: 1em;
+          width: 50%;
+          font-size: 1rem;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+    
+          font-weight: 600;
+    
+          &:first-child {
+            background-color: #ec4a4a20;
+            color: #ec4a4a;
+
+            transition: background-color 0.2s ease-in-out;
+    
+            &:hover {
+              background-color: #ec4a4a;
+              color: var(--foreground);
+            }
+          }
+    
+          &:last-child {
+            background-color: #404040;
+            color: #979797;
+
+            transition: background-color 0.2s ease-in-out;
+    
+            &:hover {
+              color: var(--foreground);
+              background-color: #515151;
+            }
+          }
+        }
+      }
+    }
   }
